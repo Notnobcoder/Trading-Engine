@@ -1,0 +1,5 @@
+CMake is
+an open-source, cross-platform meta-build system that manages the software compilation process using platform-independent configuration files 
+
+Google Test (GTest)
+is an open-source, platform-independent C++ testing framework developed by Google. It is used for writing and running unit and integration tests, and is based on the xUnit architecture. The framework helps developers write better, portable, and reusable tests by providing a rich set of assertion macros, test fixtures, and advanced features like parameterized and death tests
