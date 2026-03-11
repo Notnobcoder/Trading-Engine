@@ -1,8 +1,8 @@
 build: 
-	g++ main.cpp -o ./bin/a.out
+	g++ ./cmd/main.cpp -o ./bin/a.out
 
 run:
-	g++ main.cpp -o ./bin/a.out
+	g++ ./cmd/main.cpp -o ./bin/a.out
 	./bin/a.out
 
 start:

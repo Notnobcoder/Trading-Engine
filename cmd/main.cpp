@@ -6,9 +6,11 @@ public:
   void INFO(std::string value) {
     std::cout << "LOG" << " " << value << std::endl;
   };
+
   void WARNING(std::string value) {
     std::cout << "WARNING" << " " << value << std::endl;
   };
+
   void ERROR(std::string value) {
     std::cout << "ERROR" << " " << value << std::endl;
   };
