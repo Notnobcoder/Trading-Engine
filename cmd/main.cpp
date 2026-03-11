@@ -1,25 +1,30 @@
+#include <chrono>
+#include <format>
 #include <iostream>
+#include <string_view>
 
 class Logger {
-
 public:
-  void INFO(std::string value) {
-    std::cout << "LOG" << " " << value << std::endl;
-  };
+  void INFO(std::string_view value) { log("LOG", value); }
+  void WARNING(std::string_view value) { log("WARNING", value); }
+  void ERROR(std::string_view value) { log("ERROR", value); }
 
-  void WARNING(std::string value) {
-    std::cout << "WARNING" << " " << value << std::endl;
-  };
+private:
+  void log(std::string_view level, std::string_view msg) {
+    auto now = std::chrono::system_clock::now();
 
-  void ERROR(std::string value) {
-    std::cout << "ERROR" << " " << value << std::endl;
-  };
+    std::cout << std::format("[{}] [{}] {}\n", now, level, msg);
+  }
 };
 
-int main() {
+void Logg() {
   Logger Log;
   Log.INFO("hello world");
   Log.WARNING("hello world");
   Log.ERROR("hello world");
+}
+
+int main() {
+  Logg();
   return 0;
 }
